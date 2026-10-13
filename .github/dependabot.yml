@@ -19,6 +19,17 @@ updates:
           - "NSubstitute"
           - "coverlet.*"
           - "Microsoft.NET.Test.Sdk"
+    ignore:
+      # Framework-aligned packages: keep on the same major line as EF Core.
+      # Bump these together, deliberately, when moving the target framework.
+      - dependency-name: "Microsoft.EntityFrameworkCore*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "Microsoft.Extensions.*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "Npgsql.*"
+        update-types: ["version-update:semver-major"]
+      - dependency-name: "EFCore.*"
+        update-types: ["version-update:semver-major"]
     labels:
       - dependencies
 
