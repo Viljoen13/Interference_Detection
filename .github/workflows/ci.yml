@@ -35,6 +35,9 @@ jobs:
       - name: Restore
         run: dotnet restore InterferenceDetection.sln
 
+      - name: Check formatting
+        run: dotnet format InterferenceDetection.sln --verify-no-changes --no-restore
+
       - name: Build
         run: dotnet build InterferenceDetection.sln --configuration Release --no-restore
 
