@@ -1,0 +1,32 @@
+version: 2
+updates:
+  - package-ecosystem: nuget
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    groups:
+      # One PR per group instead of one per package
+      efcore:
+        patterns:
+          - "Microsoft.EntityFrameworkCore*"
+          - "Npgsql.*"
+          - "EFCore.*"
+      testing:
+        patterns:
+          - "xunit*"
+          - "FluentAssertions"
+          - "NSubstitute"
+          - "coverlet.*"
+          - "Microsoft.NET.Test.Sdk"
+    labels:
+      - dependencies
+
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    labels:
+      - dependencies
+      - ci

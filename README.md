@@ -1,5 +1,8 @@
 # Interference Detection Service
 
+[![CI](https://github.com/Viljoen13/Interference_Detection/actions/workflows/ci.yml/badge.svg)](https://github.com/Viljoen13/Interference_Detection/actions/workflows/ci.yml)
+[![CodeQL](https://github.com/Viljoen13/Interference_Detection/actions/workflows/codeql.yml/badge.svg)](https://github.com/Viljoen13/Interference_Detection/actions/workflows/codeql.yml)
+
 A small, clean-architecture **.NET 8 Minimal API** that models LTE and 5G NR cells, persists them to **PostgreSQL** via **EF Core**, and exposes telecoms analytics — distance, coverage overlap, and **RF interference detection** (PCI collisions, co-channel overlap).
 
 The point of the project is to demonstrate the **SOLID principles** in a realistic but small codebase — every layer is a deliberate example of one or more principles, not an academic toy.
